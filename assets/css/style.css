@@ -563,7 +563,9 @@ font-family: lato;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
             background-image: url(../img/background-destaque.png);
+
             background-position: fixed;
             background-size: cover;
             padding-top: 248px;

@@ -1,4 +1,3 @@
-
 /*
 Theme Name: Landing Page Kenzie Academy
 Theme URI: https://kenzie.com.br/
@@ -7,7 +6,6 @@ Author URI: https://kenzie.com.br/
 Description: Descrção do thema.
 Version: 1.0
 Text Domain: https://kenzie.com.br/
-
 --------------------------------------------
 ESTRUTURAÇÃO BASE
 --------------------------------------------
@@ -19,7 +17,6 @@ ESTRUTURAÇÃO BASE
 **** PÁGINA INICIAL
 **** EXTRAS
 **** @MEDIA
-
 family=Montserrat -> Menus
 family=Lato -> Títulos, textos
 */
@@ -29,7 +26,14 @@ family=Lato -> Títulos, textos
 /* FONTS */
 
 /* VARIÁVEIS */
-:root{}
+:root{
+    --Branco-Primário: #FFFFFF;
+    --Branco-Secundário: #f6f6f6;
+    --Azul-Claro: #007aff;
+    --Azul-Escuro: #00043e;
+    --Cinza-Claro: #818181;
+    --Cinza-Escuro: #303030;
+}
   
 /* GERAL */
 html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
@@ -68,10 +72,43 @@ html{}
   
 /* BODY */
 body{}
+
+h2{
+    font-family: 'Montserrat';
+}
 /* BODY */
   
 /* HEADER */
-header{}
+header{
+   background-color: var(--Azul-Escuro);
+   }
+
+.large-container{
+    display: flex;
+    justify-content: space-between;
+}   
+
+.imgLogo{
+    width: 23%;
+    padding: 10px;
+}
+
+.menu{
+padding-right: 10px;
+}
+
+.imgMenu{
+    padding: 10px;
+    width: 70%; 
+}
+
+nav{
+    display: none;
+}
+
+figcaption{
+    display: none;
+}
 /* HEADER */
   
 /* FOOTER */
@@ -80,6 +117,70 @@ footer{}
 
 /* INICIAL */
 main{}
+/*destaque*/
+.secaoDestaque{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Azul-Escuro);
+    padding-bottom: 120px;
+}
+
+.tituloDestaque{
+    font-size: 30px;
+    color: var(--Branco-Secundário);
+    text-align: center;
+    font-weight: 400;
+    width: 75%;
+
+}
+
+.paragrafoDestaque{
+    font-size: 24px;
+    color: var(--Branco-Secundário);
+    padding: 11px;
+    font-weight: 14;
+    width: 64%;
+    text-align: center;
+}
+
+.secaoDestaqueFormulario{
+    display: flex;
+    justify-content: center;
+    width: max-content;
+}
+
+.secaoDestaqueFormulario input{
+    width: 68%;
+    height: 37px;
+    border: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    color: var(--Cinza-Claro);
+    font-size: 14px;    
+}
+
+.secaoDestaque button{
+    width: 30%;
+    border: 0;
+    padding: 0px 8px;
+    height: 37px;
+    border-top-right-radius:  4px;
+    border-bottom-right-radius: 4px;
+    font-size: 14px;
+    color: var(--Branco-Secundário);
+    background-color: var(--Azul-Claro);
+    display: inline-block;
+}
+
+.flex-col{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+/* destaque*/
 /* INICIAL */
 
 /* EXTRAS */
@@ -97,7 +198,206 @@ main{}
   
 
 /* MEDIA QUERIES */
-    @media screen and (min-width: 400px) {}
+    @media screen and (min-width: 720px) {
+        .large-container{
+            display: flex;
+            justify-content: space-around;
+        }
+       
+        .imgLogo{
+            width: 30px;
+            padding: 10px;
+        }
+
+        .menu{
+            display: none;
+        }
+
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menuUl{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+        }
+
+        .listMenu{
+            padding: 15px;          
+        }
+
+        .listMenu a{
+            color: var(--Branco-Secundário);
+            text-decoration: none;         
+        }    
+
+        
+
+        .secaoDestaque{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--Azul-Escuro);
+            image-rendering: 100%;
+            padding-bottom: 120px;
+        }
+
+        .secaoDestaqueFormulario{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .secaoDestaqueFormulario input{
+            width: 48%;
+            height: 37px;
+            border: 0;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            color: var(--Cinza-Claro);
+            font-size: 14px;    
+        }
+        
+        .secaoDestaque button{
+            width: 13%;
+            border: 0;
+            padding: 0px 8px;
+            height: 37px;
+            border-top-right-radius:  4px;
+            border-bottom-right-radius: 4px;
+            font-size: 14px;
+            color: var(--Branco-Secundário);
+            background-color: var(--Azul-Claro);
+            display: inline-block;
+        }
+
+        
+        
+
+        
+    }
   
-    @media screen and (min-width: 800px) {}
+    @media screen and (min-width: 1024px) {
+        .large-container{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+       
+        .imgLogo{
+            width: 54px;
+            padding: 10px;
+            padding-left: 42px;
+        }
+
+        .menu{
+            display: none;
+        }
+
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menuUl{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-right: 22px;
+        }
+
+        .listMenu{
+            padding: 15px; 
+            letter-spacing: 3px;         
+        }
+
+        .listMenu a{
+            font-family: 'Lato', sans-serif ;
+            font-size: 13px;
+            color: var(--Branco-Secundário);
+            text-decoration: none;         
+        }    
+
+        
+
+        .secaoDestaque{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url(/assets/img/background-destaque.webp);
+            background-position: fixed;
+            background-size: cover;
+            padding-top: 248px;
+            padding-bottom: 326px;
+            
+        }
+
+        .secaoDestaqueFormulario{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .tituloDestaque{
+            font-size: 63px;
+            color: var(--Branco-Secundário);
+            text-align: center;
+            font-weight: 400;
+            width: 75%;
+        
+        }
+        
+        .paragrafoDestaque{
+            font-size: 21px;
+            color: var(--Branco-Secundário);
+            padding: 18px;
+            font-weight: 14;
+            width: 64%;
+            text-align: center;
+        }
+
+        .secaoDestaqueFormulario input{
+            width: 25%;
+            height: 37px;
+            border: 0;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            color: var(--Cinza-Claro);
+            font-size: 14px;    
+        }
+        
+        .secaoDestaque button{
+            width: 5%;
+            border: 0;
+            padding: 0px 8px;
+            height: 37px;
+            border-top-right-radius:  4px;
+            border-bottom-right-radius: 4px;
+            font-size: 14px;
+            color: var(--Branco-Secundário);
+            background-color: var(--Azul-Claro);
+            display: inline-block;
+        }
+
+
+        .secaoSobre .flex-col {
+            width: 37%;
+            
+        }
+
+
+
+        .secaoSobre .flex-col button {
+            width: max-content;
+            padding: 1rem;
+        }
+
+    }
 /* MEDIA QUERIES */

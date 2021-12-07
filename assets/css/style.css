@@ -565,8 +565,7 @@ font-family: lato;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-image: url(
-noturno-entrega-s3-landing-page-kenzie-MarlonHM/assets/img/background-destaque\ old.webp);
+            background-image: url(../img/background-destaque.png);
             background-position: fixed;
             background-size: cover;
             padding-top: 248px;
